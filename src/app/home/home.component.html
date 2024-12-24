@@ -1,0 +1,13 @@
+<div class="container mt-4">
+    <h2>Welcome to our Mobile Store!</h2>
+    
+    <div *ngFor="let product of products" class="card mb-4">
+      <img [src]="product.imageUrl" alt="{{ product.name }}" class="card-img-top">
+      <div class="card-body">
+        <h3 class="card-title">{{ product.name }}</h3>
+        <p class="card-text">{{ product.brand }}</p>
+        <p class="card-text">{{ product.price | currency: 'USD' }}</p>
+        <p class="card-text">{{ product.description }}</p>
+      </div>
+    </div>
+  </div>
